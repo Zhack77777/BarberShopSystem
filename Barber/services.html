@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Jay-R Barbershop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/bgbarber.jpg" alt="Jay-R Barbershop Logo" class="logo-image"></a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="services-header">
+                <h2>Our Services</h2>
+                <a href="style-generator.html" class="btn btn-accent style-generator-btn">
+                    <i class="fas fa-magic"></i> Try Our Style Generator
+                </a>
+            </div>
+            
+            <!-- Search and Filter Section -->
+            <div class="search-filter-container">
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="Search for a haircut or service...">
+                    <button type="button" id="searchButton"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <!-- Filter Dropdowns -->
+                <div class="filter-container">
+                    <select id="categoryFilter" class="filter-dropdown">
+                        <option value="">All Categories</option>
+                        <option value="haircut">Haircut</option>
+                        <option value="beard">Beard</option>
+                        <option value="coloring">Coloring</option>
+                        <option value="treatment">Treatment</option>
+                    </select>
+                    
+                    <select id="priceFilter" class="filter-dropdown">
+                        <option value="">Price Range</option>
+                        <option value="0-25">Under $25</option>
+                        <option value="26-50">$26 - $50</option>
+                        <option value="51-100">$51 - $100</option>
+                        <option value="100">$100+</option>
+                    </select>
+                    
+                    <select id="durationFilter" class="filter-dropdown">
+                        <option value="">Duration</option>
+                        <option value="0-30">Under 30 min</option>
+                        <option value="31-60">30-60 min</option>
+                        <option value="61">60+ min</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Services Grid -->
+            <div class="services-grid" id="servicesGrid">
+                <!-- Service cards will be dynamically loaded here -->
+            </div>
+            
+            <!-- No Results Message -->
+            <div id="noResults" class="no-results" style="display: none;">
+                <p>No services match your search criteria. Please try different filters.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jay-R Barbershop</h3>
+                    <p>Your style, our passion. Experience the perfect blend of traditional and modern barbering.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                    <p>Saturday: 9:00 AM - 6:00 PM</p>
+                    <p>Sunday: 10:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Jay-R Barbershop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
