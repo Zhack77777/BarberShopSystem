@@ -150,57 +150,138 @@ document.addEventListener('DOMContentLoaded', function() {
     const servicesData = [
         {
             id: 1,
-            name: 'Classic Haircut',
+            name: 'Army Cut',
             category: 'haircut',
             price: 30,
             duration: 45,
-            description: 'Professional haircut with clipper and scissor work, including shampoo and style.',
-            image: 'https://via.placeholder.com/400x300/1a237e/ffffff?text=Haircut'
+            description: 'Classic military-style haircut with clean, sharp lines and professional finish.',
+            image: 'Images/Haircut%20types/army%20cut.png'
         },
         {
             id: 2,
-            name: 'Beard Trim & Shape',
-            category: 'beard',
-            price: 20,
-            duration: 30,
-            description: 'Precision beard trimming and shaping to keep your facial hair looking its best.',
-            image: 'https://via.placeholder.com/400x300/d32f2f/ffffff?text=Beard+Trim'
-        },
-        {
-            id: 3,
-            name: 'Hair Coloring',
-            category: 'coloring',
-            price: 60,
-            duration: 90,
-            description: 'Professional hair coloring services to cover grays or try a new look.',
-            image: 'https://via.placeholder.com/400x300/1a237e/ffffff?text=Hair+Coloring'
-        },
-        {
-            id: 4,
-            name: 'Hot Towel Shave',
-            category: 'beard',
-            price: 35,
-            duration: 45,
-            description: 'Traditional straight razor shave with hot towels and premium products.',
-            image: 'https://via.placeholder.com/400x300/d32f2f/ffffff?text=Hot+Towel+Shave'
-        },
-        {
-            id: 5,
-            name: 'Kid\'s Cut',
+            name: 'Baby Haircut',
             category: 'haircut',
             price: 25,
             duration: 30,
-            description: 'Special haircut service for our younger clients in a fun, comfortable environment.',
-            image: 'https://via.placeholder.com/400x300/1a237e/ffffff?text=Kid%27s+Cut'
+            description: 'Gentle and comfortable haircut service designed specifically for our youngest clients.',
+            image: 'Images/Haircut%20types/baby%20haircut%201.png'
+        },
+        {
+            id: 3,
+            name: 'Burst Fade',
+            category: 'haircut',
+            price: 35,
+            duration: 50,
+            description: 'Modern fade style with a burst pattern that creates a unique, eye-catching look.',
+            image: 'Images/Haircut%20types/burst%20fade.png'
+        },
+        {
+            id: 4,
+            name: 'Buzz Cut',
+            category: 'haircut',
+            price: 25,
+            duration: 30,
+            description: 'Low-maintenance, uniform length cut that\'s perfect for a clean, classic look.',
+            image: 'Images/Haircut%20types/buzz%20cut.png'
+        },
+        {
+            id: 5,
+            name: 'Flat Top',
+            category: 'haircut',
+            price: 35,
+            duration: 45,
+            description: 'Iconic flat top style with perfectly level top and tapered sides for a bold statement.',
+            image: 'Images/Haircut%20types/flat%20top.png'
         },
         {
             id: 6,
-            name: 'Deep Conditioning Treatment',
-            category: 'treatment',
+            name: 'French Crop',
+            category: 'haircut',
+            price: 32,
+            duration: 40,
+            description: 'Trendy French crop with textured top and faded sides for a modern, stylish appearance.',
+            image: 'Images/Haircut%20types/french%20crop.png'
+        },
+        {
+            id: 7,
+            name: 'High Fade',
+            category: 'haircut',
+            price: 35,
+            duration: 45,
+            description: 'High fade haircut that starts high on the sides for a dramatic, clean transition.',
+            image: 'Images/Haircut%20types/high%20fade.png'
+        },
+        {
+            id: 8,
+            name: 'High Taper',
+            category: 'haircut',
+            price: 32,
+            duration: 40,
+            description: 'High taper fade that gradually decreases in length from top to bottom for a smooth look.',
+            image: 'Images/Haircut%20types/high%20taper.png'
+        },
+        {
+            id: 9,
+            name: 'Low Fade',
+            category: 'haircut',
+            price: 35,
+            duration: 45,
+            description: 'Low fade that starts near the bottom for a subtle, professional appearance.',
+            image: 'Images/Haircut%20types/low%20fade.png'
+        },
+        {
+            id: 10,
+            name: 'Low Taper',
+            category: 'haircut',
+            price: 32,
+            duration: 40,
+            description: 'Low taper fade with a gradual transition that maintains more length on the sides.',
+            image: 'Images/Haircut%20types/low%20taper.png'
+        },
+        {
+            id: 11,
+            name: 'Mid Fade',
+            category: 'haircut',
+            price: 35,
+            duration: 45,
+            description: 'Versatile mid fade that starts in the middle, offering the perfect balance of style.',
+            image: 'Images/Haircut%20types/mid%20fade.png'
+        },
+        {
+            id: 12,
+            name: 'Mohawk',
+            category: 'haircut',
             price: 40,
-            duration: 60,
-            description: 'Nourishing treatment to restore moisture and shine to dry or damaged hair.',
-            image: 'https://via.placeholder.com/400x300/1a237e/ffffff?text=Treatment'
+            duration: 50,
+            description: 'Bold mohawk style with a strip of longer hair down the center and shaved sides.',
+            image: 'Images/Haircut%20types/mohawk.png'
+        },
+        {
+            id: 13,
+            name: 'Mullet',
+            category: 'haircut',
+            price: 38,
+            duration: 50,
+            description: 'Retro mullet style with short front and sides, and longer hair in the back.',
+            image: 'Images/Haircut%20types/mullet.png'
+        },
+        {
+            id: 14,
+            name: 'Trim',
+            category: 'haircut',
+            price: 20,
+            duration: 25,
+            description: 'Quick trim to maintain your current style and keep your hair looking fresh.',
+            image: 'Images/Haircut%20types/trim.png'
+        },
+        {
+            id: 15,
+            name: 'Two Block',
+            category: 'haircut',
+            price: 35,
+            duration: 45,
+            description: 'Popular Korean-inspired two block cut with disconnected top and sides for a modern look.',
+            image: 'Images/Haircut%20types/two%20block.png'
         }
     ];
 
