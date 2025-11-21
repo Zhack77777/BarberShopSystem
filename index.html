@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay-R Barbershop - Premium Grooming Services</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#C084FC',
+                        'brand-secondary': '#22D3EE',
+                        'brand-deep': '#0F172A'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 25px 80px rgba(192, 132, 252, 0.35)'
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: 0, transform: 'translateY(30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        },
+                        floaty: {
+                            '0%, 100%': { transform: 'translateY(-6px)' },
+                            '50%': { transform: 'translateY(6px)' }
+                        },
+                        'pulse-ring': {
+                            '0%': { transform: 'scale(0.9)', opacity: 0.6 },
+                            '70%': { transform: 'scale(1.3)', opacity: 0 },
+                            '100%': { opacity: 0 }
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up .9s ease-out forwards',
+                        floaty: 'floaty 8s ease-in-out infinite',
+                        'pulse-ring': 'pulse-ring 2.4s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body antialiased">
+    <div class="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute -top-32 left-10 h-72 w-72 rounded-full bg-brand-primary/30 blur-[130px]"></div>
+            <div class="absolute top-32 right-0 h-80 w-80 rounded-full bg-brand-secondary/20 blur-[150px]"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+            <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div class="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <img src="Images/bgbarber.jpg" alt="Jay-R Barbershop logo" class="h-full w-full object-cover" />
+                        <span class="pointer-events-none absolute inset-0 rounded-2xl border border-white/20"></span>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.4em] text-white/70">Jay-R</p>
+                        <p class="font-display text-lg">Barbershop</p>
+                    </div>
+                </div>
+
+                <nav class="flex flex-1 justify-center lg:flex-none lg:justify-end">
+                    <ul class="nav-links fixed left-4 right-4 top-24 z-40 hidden flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/95 px-6 py-5 text-sm font-medium uppercase tracking-[0.2em] text-white/70 shadow-lg shadow-black/40 backdrop-blur-lg transition-all duration-300 lg:static lg:flex lg:w-auto lg:flex-row lg:border-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-white/80 lg:shadow-none">
+                        <li><a href="index.html" class="hover:text-brand-secondary transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-secondary transition">About</a></li>
+                        <li><a href="services.html" class="hover:text-brand-secondary transition">Services</a></li>
+                        <li><a href="testimonials.html" class="hover:text-brand-secondary transition">Testimonials</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-secondary transition">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="contact.html" class="hidden rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02] lg:inline-flex">Visit the Shop</a>
+
+                <div class="menu-toggle absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-brand-secondary hover:text-brand-secondary lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero -->
+            <section id="home" class="relative isolate overflow-hidden">
+                <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+                    <div>
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand-secondary animate-fade-in-up" style="animation-delay: .05s">Precision • Style • Confidence</span>
+                        <h1 class="mt-6 font-display text-4xl leading-tight text-white sm:text-5xl lg:text-6xl">
+                            Classic barbering with a <span class="bg-gradient-to-r from-brand-primary to-brand-secondary bg-clip-text text-transparent">modern edge</span>
+                        </h1>
+                        <p class="mt-6 text-lg text-white/70 animate-fade-in-up" style="animation-delay: .15s">
+                            Step inside Jay-R Barbershop for bespoke cuts, sharp fades, and grooming rituals tailored to your style. We blend tradition, innovation, and hospitality to keep you looking unstoppable.
+                        </p>
+                        <div class="mt-10 flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: .25s">
+                            <a href="#services" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-6 py-3 font-semibold text-white shadow-glow transition hover:translate-y-[-2px]">Explore Services <i class="fas fa-arrow-right"></i></a>
+                            <a href="#about" class="inline-flex items-center gap-3 rounded-full border border-white/40 px-6 py-3 font-semibold text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary">
+                                Our Story
+                                <span class="inline-flex h-6 w-6 items-center justify-center rounded-full border border-white/30 text-xs"><i class="fas fa-play"></i></span>
+                            </a>
+                        </div>
+                        <div class="mt-12 grid grid-cols-3 gap-6 text-white/70 animate-fade-in-up" style="animation-delay: .35s">
+                            <div>
+                                <p class="text-3xl font-display text-white">12+</p>
+                                <p class="text-xs uppercase tracking-[0.3em]">Years Crafting</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-display text-white">4.9★</p>
+                                <p class="text-xs uppercase tracking-[0.3em]">Client Rating</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-display text-white">600+</p>
+                                <p class="text-xs uppercase tracking-[0.3em]">Monthly Cuts</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative animate-fade-in-up" style="animation-delay: .2s">
+                        <div class="relative rounded-[32px] border border-white/10 bg-white/5 p-4 shadow-glow backdrop-blur">
+                            <div class="relative overflow-hidden rounded-3xl">
+                                <img src="Images/bgbarber.jpg" alt="Jay-R Barbershop interior" class="h-full w-full object-cover" />
+                                <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/10"></div>
+                            </div>
+                            <div class="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4 text-sm text-white/80">
+                                <p class="font-display text-lg text-white">Tailored Grooming Plans</p>
+                                <p class="mt-1 text-white/60">Consult with our master barbers to lock in your signature look and upkeep rhythm.</p>
+                            </div>
+                        </div>
+                        <div class="absolute -right-4 top-10 inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm shadow-xl animate-floaty">
+                            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary text-lg text-white"><i class="fas fa-star"></i></span>
+                            <div>
+                                <p class="font-semibold">We Offer Home Service</p>
+                                <p class="text-xs text-white/60">Message Us now</p>
+                            </div>
+                        </div>
+                        <span class="absolute -left-6 -bottom-6 h-28 w-28 rounded-full border border-brand-secondary/40"></span>
+                        <span class="absolute -left-6 -bottom-6 h-28 w-28 rounded-full border border-brand-secondary/40 animate-pulse-ring"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="relative border-t border-white/10 bg-slate-950/60">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
+                        <div class="flex-1 animate-fade-in-up" style="animation-delay:.1s">
+                            <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">About Us</p>
+                            <h2 class="mt-3 font-display text-3xl text-white sm:text-4xl">
+                                An elevated grooming experience rooted in community
+                            </h2>
+                            <p class="mt-4 text-white/70">
+                                Since March 2021, Jay-R Barbershop has shaped the styles of Taguig City with precision cuts, hot towel shaves, and a relaxed lounge vibe. Every visit feels like hanging out with friends who just so happen to be master barbers.
+                            </p>
+                            <p class="mt-4 text-white/70">
+                                We obsess over details—blade work, fades, skin prep, and the conversation—so you can walk out refreshed and confident.
+                            </p>
+                        </div>
+                        <div class="flex-1 grid gap-6 sm:grid-cols-2">
+                            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 animate-fade-in-up" style="animation-delay:.2s">
+                                <div class="text-4xl text-brand-secondary"><i class="fas fa-user-tie"></i></div>
+                                <h3 class="mt-6 text-2xl font-semibold text-white tracking-tight">Master Barbers</h3>
+                            </div>
+                            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 animate-fade-in-up" style="animation-delay:.3s">
+                                <div class="text-4xl text-brand-secondary"><i class="fas fa-crown"></i></div>
+                                <h3 class="mt-6 text-2xl font-semibold text-white tracking-tight">Premium Products</h3>
+                            </div>
+                            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 animate-fade-in-up" style="animation-delay:.4s">
+                                <div class="text-4xl text-brand-secondary"><i class="fas fa-mug-hot"></i></div>
+                                <h3 class="mt-6 text-2xl font-semibold text-white tracking-tight">Lounge Energy</h3>
+                            </div>
+                            <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/10 animate-fade-in-up" style="animation-delay:.5s">
+                                <div class="text-4xl text-brand-secondary"><i class="fas fa-shield-alt"></i></div>
+                                <h3 class="mt-6 text-2xl font-semibold text-white tracking-tight">Hospital-grade Hygiene</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="relative border-t border-white/10 bg-gradient-to-b from-slate-950 via-slate-900/80 to-slate-950">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="flex flex-col gap-6 text-center">
+                        <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">Our Services</p>
+                        <h2 class="font-display text-3xl text-white sm:text-4xl">Signature treatments tailored to you</h2>
+                        <p class="mx-auto max-w-3xl text-white/70">From crisp fades to deluxe beard work, every service includes consultation, hot towel finish, and product recommendations to keep your look fresh.</p>
+                    </div>
+                    <div class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+                        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-brand-secondary/60 hover:bg-white/10">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary to-brand-secondary text-2xl text-white"><i class="fas fa-cut"></i></div>
+                            <h3 class="mt-6 font-semibold text-white">Haircut</h3>
+                            <p class="mt-2 text-sm text-white/70">Classic, modern, or freestyle looks crafted with razor-sharp precision.</p>
+                            <p class="mt-6 text-2xl font-display text-white">₱100</p>
+                        </article>
+                        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-brand-secondary/60 hover:bg-white/10">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary to-brand-secondary text-2xl text-white"><i class="fas fa-shower"></i></div>
+                            <h3 class="mt-6 font-semibold text-white">Beard Trim</h3>
+                            <p class="mt-2 text-sm text-white/70">Detailed line work, fades, and nourishing oils for a groomed beard.</p>
+                            <p class="mt-6 text-2xl font-display text-white">₱100</p>
+                        </article>
+                        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-brand-secondary/60 hover:bg-white/10">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary to-brand-secondary text-2xl text-white"><i class="fas fa-paint-brush"></i></div>
+                            <h3 class="mt-6 font-semibold text-white">Color & Tone</h3>
+                            <p class="mt-2 text-sm text-white/70">Vibrant hues or subtle toning using professional-grade color systems.</p>
+                            <p class="mt-6 text-2xl font-display text-white">₱150</p>
+                        </article>
+                        <article class="group rounded-3xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-2 hover:border-brand-secondary/60 hover:bg-white/10">
+                            <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-brand-primary to-brand-secondary text-2xl text-white"><i class="fas fa-home"></i></div>
+                            <h3 class="mt-6 font-semibold text-white">Home Service</h3>
+                            <p class="mt-2 text-sm text-white/70">VIP mobile setup brings our barbershop ritual straight to your door.</p>
+                            <p class="mt-6 text-2xl font-display text-white">₱500</p>
+                        </article>
+                    </div>
+                    <div class="mt-10 flex flex-wrap items-center justify-between gap-6 rounded-3xl border border-white/10 bg-white/5 px-8 py-6 text-white/80">
+                        <div class="flex items-center gap-4">
+                            <span class="inline-flex h-12 w-12 items-center justify-center rounded-full bg-brand-secondary/20 text-brand-secondary"><i class="fas fa-sparkles"></i></span>
+                            <p>Every visit includes complimentary scalp massage, hot towel finish, and styling tips.</p>
+                        </div>
+                        <a href="services.html" class="inline-flex items-center gap-2 rounded-full border border-white/30 px-5 py-2 text-sm font-semibold text-white hover:border-brand-secondary hover:text-brand-secondary">See full menu <i class="fas fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials -->
+            <section id="testimonials" class="relative border-t border-white/10 bg-slate-950/70">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="text-center">
+                        <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">Client Love</p>
+                        <h2 class="mt-3 font-display text-3xl text-white sm:text-4xl">What our regulars say</h2>
+                        <p class="mt-3 text-white/70">Community-backed, five-star rated, and always leveling up the experience.</p>
+                    </div>
+                    <div class="mt-12 grid gap-6 md:grid-cols-3">
+                        <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-lg shadow-black/20">
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-secondary"><i class="fas fa-quote-left fa-2x"></i></span>
+                                <div>
+                                    <p class="font-semibold">Kuya John</p>
+                                    <p class="text-sm text-white/60">Negosyante</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-white/80">“Solid lagi ang gupit dito. Kahit hindi ko sabihin, kabisado na nila ang paborito kong style.”</p>
+                            <div class="mt-4 flex gap-1 text-brand-secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-lg shadow-black/20">
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-secondary"><i class="fas fa-quote-left fa-2x"></i></span>
+                                <div>
+                                    <p class="font-semibold">Mang Mike</p>
+                                    <p class="text-sm text-white/60">Creative Lead</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-white/80">“Maaga akong inaasikaso at palaging maaliwalas ang staff. Walang hintayan, diretso gupit!”</p>
+                            <div class="mt-4 flex gap-1 text-brand-secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 shadow-lg shadow-black/20">
+                            <div class="flex items-center gap-3">
+                                <span class="text-brand-secondary"><i class="fas fa-quote-left fa-2x"></i></span>
+                                <div>
+                                    <p class="font-semibold">Coach Renz</p>
+                                    <p class="text-sm text-white/60">Fitness Coach</p>
+                                </div>
+                            </div>
+                            <p class="mt-4 text-white/80">“Panalo ang ambience. Madali akong nare-relax mula music hanggang sa hot towel finish.”</p>
+                            <div class="mt-4 flex gap-1 text-brand-secondary"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="relative border-t border-white/10 bg-gradient-to-b from-slate-950/80 to-slate-950">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="grid gap-10 lg:grid-cols-2">
+                        <div class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg shadow-black/20">
+                            <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">Visit Us</p>
+                            <h2 class="mt-4 font-display text-3xl text-white">Come through for a fresh look</h2>
+                            <div class="mt-6 space-y-4 text-white/80">
+                                <p><i class="fas fa-map-marker-alt mr-3 text-brand-secondary"></i>#27 Gen. Santos Ave., Lower Bicutan, Taguig City</p>
+                                <p><i class="fas a-phone mr-3 text-brand-secondary"></i>0948 120 6179</p>
+                                <p><i class="fas fa-envelope mr-3 text-brand-secondary"></i>info@jayrbarbershop.com</p>
+                                <p><i class="fas fa-clock mr-3 text-brand-secondary"></i>Mon - Sun • 7:30 AM - 9:00 PM</p>
+                            </div>
+                            <div class="mt-8 flex gap-3">
+                                <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                        <form class="contact-form rounded-3xl border border-white/10 bg-slate-900/60 p-8 shadow-xl shadow-black/30" data-form-source="home-contact">
+                            <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">Message Us</p>
+                            <h3 class="mt-4 text-2xl font-display text-white">Let's plan your next cut</h3>
+                            <div class="mt-8 space-y-5">
+                                <input type="text" name="name" placeholder="Full Name" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <input type="email" name="email" placeholder="Email Address" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <input type="tel" name="phone" placeholder="Phone (optional)" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <input type="text" name="service" placeholder="Preferred Service" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <textarea name="message" placeholder="How can we help you?" rows="4" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none"></textarea>
+                            </div>
+                            <button type="submit" class="mt-8 w-full rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-6 py-3 font-semibold text-white shadow-glow transition hover:translate-y-[-2px]">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10 bg-slate-950/80">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.4em] text-white/50">Jay-R Barbershop</p>
+                    <p class="mt-3 text-lg text-white/80">Your style, our passion. Classic craft meets modern flow.</p>
+                </div>
+                <ul class="flex flex-wrap gap-4 text-sm text-white/60">
+                    <li><a href="#home" class="hover:text-brand-secondary">Home</a></li>
+                    <li><a href="#about" class="hover:text-brand-secondary">About</a></li>
+                    <li><a href="#services" class="hover:text-brand-secondary">Services</a></li>
+                    <li><a href="#testimonials" class="hover:text-brand-secondary">Testimonials</a></li>
+                    <li><a href="#contact" class="hover:text-brand-secondary">Contact</a></li>
+                </ul>
+                <p class="text-xs text-white/40">© 2025 Jay-R Barbershop. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/firebase-init.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

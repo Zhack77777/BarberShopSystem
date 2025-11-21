@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Jay-R Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#C084FC',
+                        'brand-secondary': '#22D3EE'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 25px 80px rgba(192, 132, 252, 0.35)'
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: 0, transform: 'translateY(30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up .9s ease-out forwards'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body antialiased">
+    <div class="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute -top-32 left-10 h-72 w-72 rounded-full bg-brand-primary/30 blur-[130px]"></div>
+            <div class="absolute top-24 right-0 h-80 w-80 rounded-full bg-brand-secondary/20 blur-[150px]"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div class="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <img src="Images/bgbarber.jpg" alt="Jay-R Barbershop logo" class="h-full w-full object-cover" />
+                        <span class="pointer-events-none absolute inset-0 rounded-2xl border border-white/20"></span>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.4em] text-white/70">Jay-R</p>
+                        <p class="font-display text-lg">Barbershop</p>
+                    </div>
+                </div>
+
+                <div class="menu-toggle flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-brand-secondary hover:text-brand-secondary lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+
+                <nav class="relative w-full lg:w-auto lg:static">
+                    <ul class="nav-links fixed left-4 right-4 top-24 z-40 hidden flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/95 px-6 py-5 text-sm font-medium uppercase tracking-[0.2em] text-white/70 shadow-lg shadow-black/40 backdrop-blur-lg transition-all duration-300 lg:static lg:flex lg:w-auto lg:flex-row lg:border-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-white/80 lg:shadow-none">
+                        <li><a href="index.html" class="hover:text-brand-secondary transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-secondary transition">About</a></li>
+                        <li><a href="services.html" class="text-brand-secondary">Services</a></li>
+                        <li><a href="testimonials.html" class="hover:text-brand-secondary transition">Testimonials</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-secondary transition">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="contact.html" class="hidden rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02] lg:inline-flex">Visit the Shop</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="relative isolate overflow-hidden">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="text-center">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand-secondary">Service Menu</span>
+                        <h1 class="mt-6 font-display text-4xl leading-tight text-white sm:text-5xl">Premium cuts, shaves, and treatments</h1>
+                        <p class="mt-4 text-white/70">Dial in your next look with filters and live search. Every haircut includes consultation, wash, scalp massage, and hot towel finish.</p>
+                    </div>
+
+                    <div class="mt-12 grid gap-6 lg:grid-cols-[2fr,1fr]">
+                        <div class="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg">
+                            <div class="flex flex-col gap-4 md:flex-row">
+                                <div class="flex flex-1 rounded-2xl border border-white/10 bg-white/5">
+                                    <input type="text" id="searchInput" placeholder="Search for a haircut or service..." class="w-full bg-transparent px-4 py-3 text-white placeholder:text-white/50 focus:outline-none" />
+                                    <button type="button" id="searchButton" class="flex items-center justify-center rounded-r-2xl bg-gradient-to-r from-brand-primary to-brand-secondary px-4 text-white"><i class="fas fa-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-12" id="services">
+                        <div class="services-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="servicesGrid">
+                            <!-- Populated via JS -->
+                        </div>
+                        <div id="noResults" class="mt-8 hidden rounded-3xl border border-red-500/30 bg-red-500/10 p-6 text-center text-sm text-red-200">
+                            No services match your search criteria. Please try different filters.
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10 bg-slate-950/80">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.4em] text-white/50">Jay-R Barbershop</p>
+                    <p class="mt-3 text-lg text-white/80">Your style, our passion. Classic craft meets modern flow.</p>
+                </div>
+                <ul class="flex flex-wrap gap-4 text-sm text-white/60">
+                    <li><a href="index.html" class="hover:text-brand-secondary">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brand-secondary">About</a></li>
+                    <li><a href="services.html" class="text-brand-secondary">Services</a></li>
+                    <li><a href="testimonials.html" class="hover:text-brand-secondary">Testimonials</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-secondary">Contact</a></li>
+                </ul>
+                <p class="text-xs text-white/40">© 2025 Jay-R Barbershop. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

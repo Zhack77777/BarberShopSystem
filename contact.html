@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial_attention=1.0">
+    <title>Contact Us - Jay-R Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#C084FC',
+                        'brand-secondary': '#22D3EE'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 25px 80px rgba(192, 132, 252, 0.35)'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body antialiased">
+    <div class="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute -top-32 left-10 h-72 w-72 rounded-full bg-brand-primary/30 blur-[130px]"></div>
+            <div class="absolute top-24 right-0 h-80 w-80 rounded-full bg-brand-secondary/20 blur-[150px]"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+            <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div class="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <img src="Images/bgbarber.jpg" alt="Jay-R Barbershop logo" class="h-full w-full object-cover" />
+                        <span class="pointer-events-none absolute inset-0 rounded-2xl border border-white/20"></span>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.4em] text-white/70">Jay-R</p>
+                        <p class="font-display text-lg">Barbershop</p>
+                    </div>
+                </div>
+
+                <div class="menu-toggle flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-brand-secondary hover:text-brand-secondary lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+
+                <nav class="relative w-full lg:w-auto lg:static">
+                    <ul class="nav-links fixed left-4 right-4 top-24 z-40 hidden flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/95 px-6 py-5 text-sm font-medium uppercase tracking-[0.2em] text-white/70 shadow-lg shadow-black/40 backdrop-blur-lg transition-all duration-300 lg:static lg:flex lg:w-auto lg:flex-row lg:border-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-white/80 lg:shadow-none">
+                        <li><a href="index.html" class="hover:text-brand-secondary transition">Home</a></li>
+                        <li><a href="about.html" class="hover:text-brand-secondary transition">About</a></li>
+                        <li><a href="services.html" class="hover:text-brand-secondary transition">Services</a></li>
+                        <li><a href="testimonials.html" class="hover:text-brand-secondary transition">Testimonials</a></li>
+                        <li><a href="contact.html" class="text-brand-secondary">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="contact.html" class="hidden rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02] lg:inline-flex">Visit the Shop</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="relative isolate overflow-hidden">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="text-center">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand-secondary">Contact</span>
+                        <h1 class="mt-6 font-display text-4xl leading-tight text-white sm:text-5xl">Let's plan your next visit</h1>
+                        <p class="mt-4 text-white/70">Drop by our Lower Bicutan studio or send a message—our team replies within the hour during shop hours.</p>
+                    </div>
+
+                    <div class="mt-14 grid gap-10 lg:grid-cols-2">
+                        <div class="space-y-6">
+                            <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                                <div class="flex items-center gap-3 text-brand-secondary"><i class="fas fa-map-marker-alt"></i><p class="text-white/80">#27 Gen. Santos Ave., Lower Bicutan, Taguig City</p></div>
+                                <div class="mt-4 flex items-center gap-3 text-brand-secondary"><i class="fas fa-phone"></i><p class="text-white/80">0948 120 6179</p></div>
+                                <div class="mt-4 flex items-center gap-3 text-brand-secondary"><i class="fas fa-envelope"></i><p class="text-white/80">info@jayrbarbershop.com</p></div>
+                                <div class="mt-4 flex items-center gap-3 text-brand-secondary"><i class="fas fa-clock"></i><p class="text-white/80">Mon - Sun • 7:30 AM - 9:00 PM</p></div>
+                            </div>
+                            <div class="rounded-3xl border border-white/10 bg-slate-900/70 p-8 shadow-lg">
+                                <p class="text-sm uppercase tracking-[0.3em] text-brand-secondary">Follow Us</p>
+                                <div class="mt-4 flex gap-3">
+                                    <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-twitter"></i></a>
+                                    <a href="#" class="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-lg text-white/80 transition hover:border-brand-secondary hover:text-brand-secondary"><i class="fab fa-tiktok"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="contact-form rounded-3xl border border-white/10 bg-slate-900/70 p-8 shadow-xl" data-form-source="contact-page">
+                            <p class="text-sm uppercase tracking-[0.3em] text-brand-secondary">Send a Message</p>
+                            <div class="mt-8 space-y-5">
+                                <input type="text" name="name" placeholder="Full Name" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <input type="email" name="email" placeholder="Email Address" required class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <input type="tel" name="phone" placeholder="Phone (optional)" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" />
+                                <select name="service" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white/80 focus:border-brand-secondary focus:outline-none">
+                                    <option class="text-slate-900" value="">Select Service</option>
+                                    <option class="text-slate-900" value="haircut">Haircut</option>
+                                    <option class="text-slate-900" value="beard">Beard Trim</option>
+                                    <option class="text-slate-900" value="shave">Hot Towel Shave</option>
+                                    <option class="text-slate-900" value="coloring">Hair Coloring</option>
+                                    <option class="text-slate-900" value="other">Other</option>
+                                </select>
+                                <textarea name="message" rows="4" placeholder="Tell us what you need" class="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/40 focus:border-brand-secondary focus:outline-none" required></textarea>
+                            </div>
+                            <button type="submit" class="mt-8 w-full rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-6 py-3 font-semibold text-white shadow-glow transition hover:translate-y-[-2px]">Send Message</button>
+                        </form>
+                    </div>
+
+                    <div class="mt-16 rounded-3xl border border-white/10 bg-white/5 p-6">
+                        <h2 class="font-display text-2xl text-white">Find us on the map</h2>
+                        <p class="mt-2 text-sm text-white/60">Street parking available on Gen. Santos Ave. Look for the mural facade.</p>
+                        <div class="mt-6 overflow-hidden rounded-2xl border border-white/10">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.8672260666285!2d121.0564056741296!3d14.488864985984357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf6cf72931a5%3A0x3c8ec28c193943b9!2sJay-R%20Barbershop!5e1!3m2!1sen!2sph!4v1763746265773!5m2!1sen!2sph" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10 bg-slate-950/80">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.4em] text-white/50">Jay-R Barbershop</p>
+                    <p class="mt-3 text-lg text-white/80">Your style, our passion. Classic craft meets modern flow.</p>
+                </div>
+                <ul class="flex flex-wrap gap-4 text-sm text-white/60">
+                    <li><a href="index.html" class="hover:text-brand-secondary">Home</a></li>
+                    <li><a href="about.html" class="hover:text-brand-secondary">About</a></li>
+                    <li><a href="services.html" class="hover:text-brand-secondary">Services</a></li>
+                    <li><a href="testimonials.html" class="hover:text-brand-secondary">Testimonials</a></li>
+                    <li><a href="contact.html" class="text-brand-secondary">Contact</a></li>
+                </ul>
+                <p class="text-xs text-white/40">© 2025 Jay-R Barbershop. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="js/firebase-init.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Generator - Jay-R Barbershop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-generator.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="Images/bgbarber.jpg" alt="Jay-R Barbershop Logo" class="logo-image"></a>
+            </div>
+            <nav>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="style-generator.html" class="active">Style Generator</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Style Generator Section -->
+    <section class="style-generator">
+        <div class="container">
+            <h1>Create Your Perfect Style</h1>
+            <p class="subtitle">Customize every detail of your haircut with our interactive style generator</p>
+            
+            <div class="generator-container">
+                <!-- Preview Section -->
+                <div class="preview-section">
+                    <div class="preview-container">
+                        <div class="preview-image" id="previewImage">
+                            <img src="https://via.placeholder.com/400x500/1a237e/ffffff?text=Front+View" alt="Front View" id="frontView">
+                            <img src="https://via.placeholder.com/400x500/d32f2f/ffffff?text=Side+View" alt="Side View" id="sideView" style="display: none;">
+                            <img src="https://via.placeholder.com/400x500/1a237e/ffffff?text=Back+View" alt="Back View" id="backView" style="display: none;">
+                        </div>
+                        <div class="view-controls">
+                            <button class="view-btn active" data-view="front">Front</button>
+                            <button class="view-btn" data-view="side">Side</button>
+                            <button class="view-btn" data-view="back">Back</button>
+                        </div>
+                    </div>
+                    <div class="style-summary">
+                        <h3>Your Style Summary</h3>
+                        <ul id="styleSummary">
+                            <!-- Will be populated by JavaScript -->
+                        </ul>
+                        <button id="saveStyleBtn" class="btn">Save This Style</button>
+                        <button id="bookAppointmentBtn" class="btn btn-accent">Book Appointment</button>
+                    </div>
+                </div>
+                
+                <!-- Customization Panel -->
+                <div class="customization-panel">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="length">Length</button>
+                        <button class="tab-btn" data-tab="sides">Sides</button>
+                        <button class="tab-btn" data-tab="top">Top</button>
+                        <button class="tab-btn" data-tab="fringe">Fringe</button>
+                        <button class="tab-btn" data-tab="details">Details</button>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <!-- Length Tab -->
+                        <div class="tab-pane active" id="length-tab">
+                            <h3>Hair Length</h3>
+                            <div class="options-grid">
+                                <div class="option" data-option="buzz">
+                                    <img src="https://via.placeholder.com/100x100?text=Buzz" alt="Buzz">
+                                    <span>Buzz Cut</span>
+                                </div>
+                                <div class="option" data-option="short">
+                                    <img src="https://via.placeholder.com/100x100?text=Short" alt="Short">
+                                    <span>Short</span>
+                                </div>
+                                <div class="option" data-option="medium">
+                                    <img src="https://via.placeholder.com/100x100?text=Medium" alt="Medium">
+                                    <span>Medium</span>
+                                </div>
+                                <div class="option" data-option="long">
+                                    <img src="https://via.placeholder.com/100x100?text=Long" alt="Long">
+                                    <span>Long</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sides Tab -->
+                        <div class="tab-pane" id="sides-tab">
+                            <h3>Sides Style</h3>
+                            <div class="options-grid">
+                                <div class="option" data-option="fade">
+                                    <img src="https://via.placeholder.com/100x100?text=Fade" alt="Fade">
+                                    <span>Fade</span>
+                                </div>
+                                <div class="option" data-option="taper">
+                                    <img src="https://via.placeholder.com/100x100?text=Taper" alt="Taper">
+                                    <span>Taper</span>
+                                </div>
+                                <div class="option" data-option="undercut">
+                                    <img src="https://via.placeholder.com/100x100?text=Undercut" alt="Undercut">
+                                    <span>Undercut</span>
+                                </div>
+                                <div class="option" data-option="buzzed">
+                                    <img src="https://via.placeholder.com/100x100?text=Buzzed" alt="Buzzed">
+                                    <span>Buzzed</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Top Tab -->
+                        <div class="tab-pane" id="top-tab">
+                            <h3>Top Style</h3>
+                            <div class="options-grid">
+                                <div class="option" data-option="slick-back">
+                                    <img src="https://via.placeholder.com/100x100?text=Slick+Back" alt="Slick Back">
+                                    <span>Slick Back</span>
+                                </div>
+                                <div class="option" data-option="quiff">
+                                    <img src="https://via.placeholder.com/100x100?text=Quiff" alt="Quiff">
+                                    <span>Quiff</span>
+                                </div>
+                                <div class="option" data-option="pompadour">
+                                    <img src="https://via.placeholder.com/100x100?text=Pompadour" alt="Pompadour">
+                                    <span>Pompadour</span>
+                                </div>
+                                <div class="option" data-option="textured">
+                                    <img src="https://via.placeholder.com/100x100?text=Textured" alt="Textured">
+                                    <span>Textured</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Fringe Tab -->
+                        <div class="tab-pane" id="fringe-tab">
+                            <h3>Fringe/Bangs</h3>
+                            <div class="options-grid">
+                                <div class="option" data-option="side-part">
+                                    <img src="https://via.placeholder.com/100x100?text=Side+Part" alt="Side Part">
+                                    <span>Side Part</span>
+                                </div>
+                                <div class="option" data-option="straight">
+                                    <img src="https://via.placeholder.com/100x100?text=Straight" alt="Straight">
+                                    <span>Straight</span>
+                                </div>
+                                <div class="option" data-option="swept">
+                                    <img src="https://via.placeholder.com/100x100?text=Swept" alt="Swept">
+                                    <span>Swept</span>
+                                </div>
+                                <div class="option" data-option="none">
+                                    <img src="https://via.placeholder.com/100x100?text=None" alt="None">
+                                    <span>None</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Details Tab -->
+                        <div class="tab-pane" id="details-tab">
+                            <h3>Additional Details</h3>
+                            <div class="details-options">
+                                <div class="form-group">
+                                    <label>Hair Color</label>
+                                    <select id="hairColor" class="form-control">
+                                        <option value="natural">Natural</option>
+                                        <option value="black">Black</option>
+                                        <option value="brown">Brown</option>
+                                        <option value="blonde">Blonde</option>
+                                        <option value="red">Red</option>
+                                        <option value="gray">Gray</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Hair Type</label>
+                                    <select id="hairType" class="form-control">
+                                        <option value="straight">Straight</option>
+                                        <option value="wavy">Wavy</option>
+                                        <option value="curly">Curly</option>
+                                        <option value="coily">Coily/Kinky</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Special Requests</label>
+                                    <textarea id="specialRequests" class="form-control" rows="3" placeholder="Any special instructions for your barber"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Save & Share Section -->
+            <div class="save-share-section" id="saveShareSection" style="display: none;">
+                <h2>Save or Share Your Style</h2>
+                <div class="save-options">
+                    <button id="downloadStyleBtn" class="btn">
+                        <i class="fas fa-download"></i> Download Image
+                    </button>
+                    <button id="shareStyleBtn" class="btn">
+                        <i class="fas fa-share-alt"></i> Share
+                    </button>
+                    <button id="printStyleBtn" class="btn">
+                        <i class="fas fa-print"></i> Print
+                    </button>
+                </div>
+                <div class="style-code">
+                    <p>Your style code: <span id="styleCode">JRB-XXXXXX</span></p>
+                    <button id="copyCodeBtn" class="btn btn-small">
+                        <i class="far fa-copy"></i> Copy Code
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Jay-R Barbershop</h3>
+                    <p>Your Style, Our Passion</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="style-generator.html">Style Generator</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Barber St, City, Country</p>
+                    <p><i class="fas fa-phone"></i> (123) 456-7890</p>
+                    <p><i class="fas fa-envelope"></i> info@jayrbarbershop.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Jay-R Barbershop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/style-generator.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

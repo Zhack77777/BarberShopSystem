@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Jay-R Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-primary': '#C084FC',
+                        'brand-secondary': '#22D3EE',
+                        'brand-deep': '#0F172A'
+                    },
+                    fontFamily: {
+                        display: ['"Space Grotesk"', 'sans-serif'],
+                        body: ['Inter', 'sans-serif']
+                    },
+                    boxShadow: {
+                        glow: '0 25px 80px rgba(192, 132, 252, 0.35)'
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: 0, transform: 'translateY(30px)' },
+                            '100%': { opacity: 1, transform: 'translateY(0)' }
+                        },
+                        floaty: {
+                            '0%, 100%': { transform: 'translateY(-6px)' },
+                            '50%': { transform: 'translateY(6px)' }
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up .9s ease-out forwards',
+                        floaty: 'floaty 8s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-100 font-body antialiased">
+    <div class="relative min-h-screen overflow-hidden bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+        <div class="pointer-events-none absolute inset-0">
+            <div class="absolute -top-32 left-10 h-72 w-72 rounded-full bg-brand-primary/30 blur-[130px]"></div>
+            <div class="absolute top-24 right-0 h-80 w-80 rounded-full bg-brand-secondary/20 blur-[150px]"></div>
+        </div>
+
+        <!-- Header -->
+        <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/80 backdrop-blur">
+            <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+                <div class="flex items-center gap-3">
+                    <div class="relative h-12 w-12 overflow-hidden rounded-2xl border border-white/10 bg-white/5">
+                        <img src="Images/bgbarber.jpg" alt="Jay-R Barbershop logo" class="h-full w-full object-cover" />
+                        <span class="pointer-events-none absolute inset-0 rounded-2xl border border-white/20"></span>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.4em] text-white/70">Jay-R</p>
+                        <p class="font-display text-lg">Barbershop</p>
+                    </div>
+                </div>
+
+                <nav class="flex flex-1 justify-center lg:flex-none lg:justify-end">
+                    <ul class="nav-links fixed left-4 right-4 top-24 z-40 hidden flex-col gap-6 rounded-2xl border border-white/10 bg-slate-900/95 px-6 py-5 text-sm font-medium uppercase tracking-[0.2em] text-white/70 shadow-lg shadow-black/40 backdrop-blur-lg transition-all duration-300 lg:static lg:flex lg:w-auto lg:flex-row lg:border-none lg:bg-transparent lg:px-0 lg:py-0 lg:text-white/80 lg:shadow-none">
+                        <li><a href="index.html" class="hover:text-brand-secondary transition">Home</a></li>
+                        <li><a href="about.html" class="text-brand-secondary">About</a></li>
+                        <li><a href="services.html" class="hover:text-brand-secondary transition">Services</a></li>
+                        <li><a href="testimonials.html" class="hover:text-brand-secondary transition">Testimonials</a></li>
+                        <li><a href="contact.html" class="hover:text-brand-secondary transition">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <a href="contact.html" class="hidden rounded-full bg-gradient-to-r from-brand-primary to-brand-secondary px-5 py-2 text-sm font-semibold text-white shadow-glow transition hover:scale-[1.02] lg:inline-flex">Visit the Shop</a>
+
+                <div class="menu-toggle absolute left-1/2 top-1/2 flex h-11 w-11 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 text-white transition-all duration-300 hover:border-brand-secondary hover:text-brand-secondary lg:hidden">
+                    <i class="fas fa-bars text-xl"></i>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Hero/About Intro -->
+            <section class="relative isolate overflow-hidden">
+                <div class="mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+                    <div class="space-y-6">
+                        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-brand-secondary">About Jay-R Barbershop</span>
+                        <h1 class="font-display text-4xl leading-tight text-white sm:text-5xl">Cultivating community through precision grooming since 2021</h1>
+                        <p class="text-lg text-white/70">Founded by Catalino "Jay-R" Escudero Jr. and Maria Lina Escudero, our Lower Bicutan studio blends timeless barber craft with modern hospitality. Every cut, shave, and conversation reflects our love for the neighborhood.</p>
+                        <p class="text-white/70">With 23+ years of experience, Jay-R leads a team of master barbers who obsess over details—fades, blade work, skin prep, and product knowledge—so you leave refreshed and confident.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="rounded-2xl border border-white/10 bg-white/5 px-6 py-4">
+                                <p class="text-3xl font-display text-white">2021</p>
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/60">Established</p>
+                            </div>
+                            <div class="rounded-2xl border border-white/10 bg-white/5 px-6 py-4">
+                                <p class="text-3xl font-display text-white">23+</p>
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/60">Years Mastery</p>
+                            </div>
+                            <div class="rounded-2xl border border-white/10 bg-white/5 px-6 py-4">
+                                <p class="text-3xl font-display text-white">4.9★</p>
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/60">Client Rated</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative animate-fade-in-up">
+                        <div class="rounded-[32px] border border-white/10 bg-white/5 p-4 shadow-glow backdrop-blur">
+                            <div class="relative overflow-hidden rounded-3xl">
+                                <img src="Images/light.jpg" alt="Inside Jay-R Barbershop" class="h-full w-full object-cover" />
+                                <div class="absolute inset-0 bg-gradient-to-tr from-brand-primary/20 to-brand-secondary/10"></div>
+                            </div>
+                            <div class="mt-4 rounded-2xl border border-white/10 bg-white/5 p-4">
+                                <p class="font-display text-lg text-white">“Every client is family.”</p>
+                                <p class="text-sm text-white/60">— Maria Lina Escudero, Co-founder</p>
+                            </div>
+                        </div>
+                        <div class="absolute -right-4 top-12 inline-flex items-center gap-3 rounded-2xl border border-white/20 bg-slate-900/80 px-4 py-3 text-sm shadow-xl animate-floaty">
+                            <span class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-brand-primary to-brand-secondary text-lg text-white"><i class="fas fa-heart"></i></span>
+                            <div>
+                                <p class="font-semibold">Community First</p>
+                                <p class="text-xs text-white/60">Local roots, global standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mission & Vision -->
+            <section class="border-t border-white/10 bg-slate-950/60">
+                <div class="mx-auto max-w-6xl px-6 py-16">
+                    <div class="grid gap-8 lg:grid-cols-2">
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-secondary/20 text-brand-secondary"><i class="fas fa-bullseye"></i></div>
+                            <h2 class="mt-6 font-display text-3xl text-white">Mission</h2>
+                            <p class="mt-4 text-white/70">Deliver exceptional grooming rituals while upholding the highest standards of craft, hygiene, and genuine care for every guest.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lg">
+                            <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-primary/20 text-brand-primary"><i class="fas fa-eye"></i></div>
+                            <h2 class="mt-6 font-display text-3xl text-white">Vision</h2>
+                            <p class="mt-4 text-white/70">To be Taguig City’s most trusted barbershop, known for artistry, culture, and an inclusive lounge atmosphere that inspires confidence.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values -->
+            <section class="border-t border-white/10 bg-gradient-to-b from-slate-950 via-slate-900/80 to-slate-950">
+                <div class="mx-auto max-w-6xl px-6 py-20">
+                    <div class="text-center">
+                        <p class="text-sm uppercase tracking-[0.4em] text-brand-secondary">What Drives Us</p>
+                        <h2 class="mt-3 font-display text-3xl text-white sm:text-4xl">Craft, culture, and care</h2>
+                        <p class="mt-4 text-white/70">Four pillars guide every service—from the first consultation to the final styling touch.</p>
+                    </div>
+                    <div class="mt-12 grid gap-6 md:grid-cols-2">
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                            <h3 class="font-semibold text-white">Precision Craft</h3>
+                            <p class="mt-2 text-white/70">Advanced fades, razor detailing, and custom scissor work rooted in global techniques.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                            <h3 class="font-semibold text-white">Modern Hospitality</h3>
+                            <p class="mt-2 text-white/70">Warm welcomes, curated playlists, and lounge seating to make every visit a recharge.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                            <h3 class="font-semibold text-white">Education & Products</h3>
+                            <p class="mt-2 text-white/70">Personalized product recommendations and tutorials so your style lasts beyond the chair.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                            <h3 class="font-semibold text-white">Community Impact</h3>
+                            <p class="mt-2 text-white/70">Supporting local creatives, hosting pop-ups, and mentoring future barbers.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="border-t border-white/10 bg-slate-950/80">
+            <div class="mx-auto flex max-w-6xl flex-col gap-8 px-6 py-10 lg:flex-row lg:items-center lg:justify-between">
+                <div>
+                    <p class="text-sm uppercase tracking-[0.4em] text-white/50">Jay-R Barbershop</p>
+                    <p class="mt-3 text-lg text-white/80">Your style, our passion. Classic craft meets modern flow.</p>
+                </div>
+                <ul class="flex flex-wrap gap-4 text-sm text-white/60">
+                    <li><a href="index.html" class="hover:text-brand-secondary">Home</a></li>
+                    <li><a href="about.html" class="text-brand-secondary">About</a></li>
+                    <li><a href="services.html" class="hover:text-brand-secondary">Services</a></li>
+                    <li><a href="testimonials.html" class="hover:text-brand-secondary">Testimonials</a></li>
+                    <li><a href="contact.html" class="hover:text-brand-secondary">Contact</a></li>
+                </ul>
+                <p class="text-xs text-white/40">© 2025 Jay-R Barbershop. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
