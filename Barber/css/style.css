@@ -308,6 +308,7 @@ header .container {
 }
 
 .about-image {
+    height: 600px;
     flex: 1;
     border-radius: 10px;
     overflow: hidden;
@@ -315,9 +316,6 @@ header .container {
 }
 
 .about-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     transition: transform 0.5s ease;
 }
 
